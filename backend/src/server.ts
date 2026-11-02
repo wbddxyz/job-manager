@@ -5,6 +5,7 @@ import { pool } from "./database.js";
 import { customerSchema, jobSchema } from "./validation.js";
 
 const app = express();
+app.set("trust proxy", 1);
 const PORT = Number(process.env.PORT) || 3001;
 
 const allowedOrigins = (
