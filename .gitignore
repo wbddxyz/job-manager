@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Build output
+.next/
+**/.next/
+dist/
+**/dist/
+
+# Miscellaneous
+*.tsbuildinfo
+.DS_Store
