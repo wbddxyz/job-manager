@@ -38,7 +38,7 @@ export default function JobsPage() {
 
   async function loadCustomers() {
     try {
-      const response = await fetch("http://localhost:3001/api/customers");
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"}/api/customers`);
 
       if (!response.ok) {
         throw new Error("Failed to load customers");
@@ -54,7 +54,7 @@ export default function JobsPage() {
 
   async function loadJobs() {
     try {
-      const response = await fetch("http://localhost:3001/api/jobs");
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"}/api/jobs`);
 
       if (!response.ok) {
         throw new Error("Failed to load jobs");
@@ -97,7 +97,7 @@ export default function JobsPage() {
     }
 
     try {
-      const response = await fetch("http://localhost:3001/api/jobs", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"}/api/jobs`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
