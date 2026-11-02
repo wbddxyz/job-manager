@@ -61,6 +61,7 @@ app.get("/api/health", async (req, res) => {
     res.json({
       status: "ok",
       message: "Job Manager API is running",
+      database: Number(result[0].database_connected) === 1
     });
   } catch (error) {
     console.error("Database connection failed:", error);
